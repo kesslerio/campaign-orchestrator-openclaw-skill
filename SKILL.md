@@ -1,8 +1,8 @@
 ---
 name: campaign-orchestrator
 description: Multi-channel follow-up campaign orchestrator for ShapeScale sales. Schedules and executes SMS + Email sequences with CRM logging and auto-termination on replies. Use when following up with demo leads or managing outreach campaigns.
-homepage: https://github.com/kesslerio/shapescale-clawdbot-skills
-metadata: {"clawdbot":{"emoji":"📋","requires":{"env":["DIALPAD_API_KEY","ATTIO_API_KEY","GOG_KEYRING_PASSWORD"]},"primaryEnv":"DIALPAD_API_KEY"}}
+homepage: https://github.com/kesslerio/shapescale-moltbot-skills
+metadata: {"moltbot":{"emoji":"📋","requires":{"env":["DIALPAD_API_KEY","ATTIO_API_KEY","GOG_KEYRING_PASSWORD"]},"primaryEnv":"DIALPAD_API_KEY"}}
 ---
 
 # Campaign Orchestrator Skill
@@ -207,7 +207,7 @@ When Dialpad receives a reply to a campaign message:
 
 ### Dialpad SMS
 ```bash
-python3 /home/art/clawd/skills/dialpad/send_sms.py --to "+14155551234" --message "..."
+python3 /home/art/niemand/skills/dialpad/send_sms.py --to "+14155551234" --message "..."
 ```
 
 ### Gmail (via gog)
@@ -271,4 +271,4 @@ attio note companies "company-uuid" "Campaign message sent: {message}"
 
 ## License
 
-Part of shapescale-clawdbot-skills. See parent repository.
+Part of shapescale-moltbot-skills. See parent repository.

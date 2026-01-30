@@ -25,7 +25,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 # Configuration
-WORKSPACE = os.environ.get("WORKSPACE", "/home/art/clawd")
+WORKSPACE = os.environ.get("WORKSPACE", "/home/art/niemand")
 STATE_DIR = Path(f"{WORKSPACE}/state/campaign-orchestrator")
 STATE_FILE = STATE_DIR / "campaigns.json"
 SKILL_DIR = Path(__file__).parent
