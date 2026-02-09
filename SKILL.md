@@ -207,7 +207,7 @@ When Dialpad receives a reply to a campaign message:
 
 ### Dialpad SMS
 ```bash
-python3 /home/art/niemand/skills/dialpad/send_sms.py --to "+14155551234" --message "..."
+python3 "$WORKSPACE/skills/dialpad/send_sms.py" --to "+14155551234" --message "..."
 ```
 
 ### Gmail (via gog)

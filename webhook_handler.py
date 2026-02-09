@@ -16,7 +16,7 @@ from datetime import datetime
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 # Configuration
-WORKSPACE = os.environ.get("WORKSPACE", "/home/art/niemand")
+WORKSPACE = os.environ.get("WORKSPACE", os.path.expanduser("~/.openclaw/state"))
 STATE_FILE = f"{WORKSPACE}/state/campaign-orchestrator/campaigns.json"
 PORT = int(os.environ.get("WEBHOOK_PORT", "8081"))
 
