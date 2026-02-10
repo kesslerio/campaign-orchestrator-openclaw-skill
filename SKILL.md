@@ -253,6 +253,28 @@ attio note companies "company-uuid" "Campaign message sent: {message}"
 # - Wellness Center (tertiary) - Step 1/3, next: sms
 ```
 
+## Action Logging
+
+After sending SMS or email campaign steps, log each action:
+
+```bash
+LOG_DONE="python3 ~/projects/skills/shared/task-tracker/scripts/log_done.py"
+
+# After sending an SMS step
+$LOG_DONE --action sms_sent --summary "Sent primary SMS to Dr. Smith's Clinic" --context '{"campaign":"primary","step":"sms_primary","lead":"Dr. Smith'\''s Clinic"}'
+
+# After sending an email step
+$LOG_DONE --action email_sent --summary "Sent secondary email to Apex Fitness" --context '{"campaign":"primary","step":"email_secondary","lead":"Apex Fitness"}'
+
+# After starting a campaign
+$LOG_DONE --action crm_update --summary "Started primary campaign for Apex Fitness"
+
+# After campaign auto-terminates on reply
+$LOG_DONE --action crm_update --summary "Campaign terminated: Apex Fitness replied"
+```
+
+Requires `TASK_TRACKER_DONE_LOG_DIR` to be set.
+
 ## Troubleshooting
 
 **Campaign not sending:**
