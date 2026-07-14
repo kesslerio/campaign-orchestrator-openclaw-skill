@@ -45,3 +45,10 @@ python3 campaign.py stop "Apex Fitness" --reason "replied_interested"
 ## Reference Documentation
 
 - **`references/campaign-guide.md`** — Full reference: setup, all CLI commands, pre-campaign checklist, template variables, architecture, state management, cron integration, webhook handling, integration points, examples, action logging, and troubleshooting
+
+## When to Hand Off
+
+- If user needs strategy/briefing beyond sequence execution: https://github.com/kesslerio/marketing-campaign-demandgen-skill
+- If user needs PR/media response tracks in campaign context: https://github.com/kesslerio/marketing-pr-comms-skill
+- If user wants reusable prompt templates for outreach variants: https://github.com/kesslerio/marketing-ai-prompting-skill
+- ASO requests are out of scope by design.
